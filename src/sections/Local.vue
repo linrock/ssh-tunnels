@@ -4,8 +4,23 @@
       <h2>Local port forwarding</h2>
 
       <div>
+        <p>
+          Forwards port 8080 on your local computer to port 80 on
+          remote-host-2.com through remote-host-1.com
+        </p>
         <code>ssh -L 8080:remote-host-2.com:80 remote-host-1.com</code>
+
+        <p>
+          Forwards only localhost port 8080 on your local computer to
+          port 80 on remote-host-2.com through remote-host-1.com
+        </p>
         <code>ssh -L 127.0.0.1:8080:remote-host-2.com:80 remote-host-1.com</code>
+
+        <p>
+          Forwards only localhost port 8080 on your local computer to
+          localhost port 80 on remote-host-1.com
+        </p>
+        <code>ssh -L 127.0.0.1:8080:localhost:80 remote-host-1.com</code>
       </div>
 
       <div>

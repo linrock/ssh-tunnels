@@ -3,6 +3,7 @@
     <Introduction/>
     <Local/>
     <Remote/>
+    <Dynamic/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
   import Introduction from './sections/Introduction.vue'
   import Local from './sections/Local.vue'
   import Remote from './sections/Remote.vue'
+  import Dynamic from './sections/Dynamic.vue'
 
   export default {
     name: 'app',
     components: {
       Introduction,
       Local,
-      Remote
+      Remote,
+      Dynamic
     }
   }
 </script>
@@ -38,6 +41,9 @@
     padding 10px 18px
     margin 20px 0
     border-radius 2px
+
+  p
+    line-height 26px
 
   #app
     font-family 'Avenir', Helvetica, Arial, sans-serif

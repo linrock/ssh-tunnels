@@ -1,26 +1,22 @@
 <template>
-  <section class="local-port-forwarding">
+  <section class="dynamic-port-forwarding">
     <div class="container">
-      <h2>Remote port forwarding</h2>
+      <h2>Dynamic port forwarding</h2>
+      <div>AKA socks proxies</div>
 
       <div>
-        <p>
-          Fowards port 8080 on remote-host-1.com to localhost port 80 on your local computer.
-        </p>
-        <code>ssh -R 8080:localhost:80 remote-host-1.com</code>
-
-        <code>ssh -R 1.2.3.4:8080:localhost:80 remote-host-2.com</code>
+        Socks proxy
+        <code>ssh -D 3000 remote-host.com</code>
       </div>
 
       <div>
-        Need to add this to your sshd_config on your remote server
-        <code>GatewayPorts yes</code>
+        Using a jump host
+        <code>ssh -D 3000 -J user@jump-host.com remote-host.com</code>
       </div>
 
       <div>
         <laptop/> localhost
       </div>
-
       <div>
         <server/> remote server
       </div>
@@ -41,8 +37,8 @@
 </script>
 
 <style scoped lang="stylus">
-  .local-port-forwarding
-    background #333
+  .dynamic-port-forwarding
+    background #222
     padding 30px 0
 
   h3
