@@ -1,10 +1,10 @@
 <template lang="pug">
   .diagram-right-arrow
     template(v-if="ssh")
-      right-arrow-long.right-arrow-long
       .label
         lock.lock
         span SSH
+      right-arrow-short.right-arrow-short
     template(v-else)
       right-arrow
 
@@ -12,7 +12,7 @@
 
 <script>
   import RightArrow from '../icons/RightArrow'
-  import RightArrowLong from '../icons/RightArrowLong'
+  import RightArrowShort from '../icons/RightArrowShort'
   import Lock from '../icons/Lock'
 
   export default {
@@ -25,7 +25,7 @@
 
     components: {
       RightArrow,
-      RightArrowLong,
+      RightArrowShort,
       Lock
     }
   }
@@ -34,22 +34,19 @@
 <style lang="stylus">
   .diagram-right-arrow
     display flex
-    position relative
-    margin 0 20px
+    align-items center
+    margin 0 25px
 
     .right-arrow-long
       height 15px
       margin-top 3px
 
       path
-        fill black
+        fill lightgreen
 
     .label
       align-items center
       display flex
-      position absolute
-      top 2px
-      left 5px
       color lightgreen
 
       .lock
@@ -58,5 +55,11 @@
       span
         font-size 12px
         margin-left 3px
+
+    .right-arrow-short
+      height 13px
+      margin-left 5px
+      path
+        fill lightgreen
 
 </style>

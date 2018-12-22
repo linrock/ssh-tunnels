@@ -6,14 +6,13 @@
         h3 Forwards connections from a port on a local system to a port on a remote host
 
       .example
+        code ssh -L 127.0.0.1:8080:example.org:80 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="127.0.0.1:8080" color="#00dcff")
           right-arrow(ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="server" annotation="example.org:80" color="rgb(255,141,0)")
-
-        code ssh -L 127.0.0.1:8080:example.org:80 ssh-server
         p
           | Forwards connections to 127.0.0.1:8080 on your local system
           | to port 80 on example.org through ssh-server. The connection
@@ -21,25 +20,25 @@
           | an SSH tunnel, but not between ssh-server and example.org
 
       .example
+        code ssh -L 8080:example.org:80 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="*:8080" color="#00dcff")
           right-arrow(ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="server" annotation="example.org:80" color="rgb(255,141,0)")
-        code ssh -L 8080:example.org:80 ssh-server
         p
           | Forwards connections to port 8080 on all interfaces on your local system
           | to port 80 on example.org through ssh-server
 
       .example
+        code ssh -L 192.168.0.1:5432:127.0.0.1:5432 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="192.168.0.1:5432" color="#00dcff")
           right-arrow(ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="server" annotation="127.0.0.1:5432" color="rgb(255,141,0)")
-        code ssh -L 192.168.0.1:5432:127.0.0.1:5432 ssh-server
         p
           | Forwards connections to 192.168.0.1:5432 on your local system to
           | 127.0.0.1:5432 on ssh-server. Note that 127.0.0.1 here is localhost
