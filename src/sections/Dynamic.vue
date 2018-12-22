@@ -6,8 +6,8 @@
         h3 Forward traffic from a range of ports to a remote server
 
       .flow-diagram
-        annotated-icon(type="laptop" annotation="localhost" color="#00dcff")
-        right-arrow
+        annotated-icon(type="laptop" annotation="localhost:3000" color="#00dcff")
+        right-arrow(ssh="true")
         annotated-icon(type="server" annotation="remote-host-1.com" color="rgb(255,141,0)")
 
       p

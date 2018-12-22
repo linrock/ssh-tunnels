@@ -3,13 +3,13 @@
     .container
       header
         h2 Jump hosts and proxy commands
-        h3 Transparently connecting to a remote host through an intermediate
+        h3 Transparently connecting to a remote host through an intermediate host
 
       .flow-diagram
         annotated-icon(type="laptop" annotation="localhost:8080" color="#00dcff")
-        right-arrow
+        right-arrow(ssh="true")
         annotated-icon(type="server" annotation="user1@jump-host" color="rgb(255,141,0)")
-        right-arrow
+        right-arrow(ssh="true")
         annotated-icon(type="server" annotation="user2@remote-host" color="rgb(255,141,0)")
 
       p

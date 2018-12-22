@@ -7,7 +7,7 @@
 
       .flow-diagram
         annotated-icon(type="laptop" annotation="localhost:8080" color="#00dcff")
-        right-arrow
+        right-arrow(ssh="true")
         annotated-icon(type="server" annotation="remote-host-1" color="rgb(255,141,0)")
         right-arrow
         annotated-icon(type="server" annotation="remote-host-2:80" color="rgb(255,141,0)")
