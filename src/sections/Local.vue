@@ -5,33 +5,28 @@
         h2 Local port forwarding
         h3 Forwards a port on a local system to a remote system
 
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | remote-host-1.com
-
-      div
-        server
-        | remote-host-2.com
+      .flow-diagram
+        annotated-icon(type="laptop" annotation="localhost:8080" color="#00dcff")
+        right-arrow
+        annotated-icon(type="server" annotation="remote-host-1" color="rgb(255,141,0)")
+        right-arrow
+        annotated-icon(type="server" annotation="remote-host-2:80" color="rgb(255,141,0)")
 
       div
         p
           | Forwards port 8080 on your local computer to port 80 on
-          | remote-host-2.com through remote-host-1.com
-        code ssh -L 8080:remote-host-2.com:80 remote-host-1.com
+          | remote-host-2 through remote-host-1
+        code ssh -L 8080:remote-host-2:80 remote-host-1
 
         p
           | Forwards only localhost port 8080 on your local computer to
-          | port 80 on remote-host-2.com through remote-host-1.com
-        code ssh -L 127.0.0.1:8080:remote-host-2.com:80 remote-host-1.com
+          | port 80 on remote-host-2 through remote-host-1
+        code ssh -L 127.0.0.1:8080:remote-host-2:80 remote-host-1
 
         p
           | Forwards only localhost port 8080 on your local computer to
-          | localhost port 80 on remote-host-1.com
-        code ssh -L 127.0.0.1:8080:localhost:80 remote-host-1.com
+          | localhost port 80 on remote-host-1
+        code ssh -L 127.0.0.1:8080:localhost:80 remote-host-1
 
       div
         p
@@ -55,13 +50,13 @@
 </template>
 
 <script>
-  import Laptop from '../icons/Laptop'
-  import Server from '../icons/Server'
+  import AnnotatedIcon from '../diagrams/annotated_icon'
+  import RightArrow from '../diagrams/right_arrow'
 
   export default {
     components: {
-      Laptop,
-      Server
+      AnnotatedIcon,
+      RightArrow
     }
   }
 </script>

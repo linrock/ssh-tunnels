@@ -10,9 +10,10 @@
       a(href="#reliable-ssh-tunnels") Reliable SSH tunnels
 
     p
-      | Since SSH commands can be run from either local or remote systems,
-      | throughout this guide, the following icons and colors will be used
-      | to hopefully make it more clear which commands are run on which.
+      | SSH commands can be run from both local or remote systems.
+      | Throughout this guide, the following icons and colors will be used
+      | to hopefully make it more clear which commands are run on which system,
+      | and to represent how the resulting TCP traffic flows between systems.
 
     p
       annotated-icon(type="laptop" annotation="localhost" color="#00dcff")

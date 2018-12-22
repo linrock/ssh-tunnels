@@ -5,13 +5,10 @@
         h2 Dynamic port forwarding
         h3 Forward traffic from a range of ports to a remote server
 
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | remote server
+      .flow-diagram
+        annotated-icon(type="laptop" annotation="localhost" color="#00dcff")
+        right-arrow
+        annotated-icon(type="server" annotation="remote-host-1.com" color="rgb(255,141,0)")
 
       p
         | Also known as a SOCKS proxy, this allows you to forward
@@ -24,13 +21,13 @@
 </template>
 
 <script>
-  import Laptop from '../icons/Laptop'
-  import Server from '../icons/Server'
+  import AnnotatedIcon from '../diagrams/annotated_icon'
+  import RightArrow from '../diagrams/right_arrow'
 
   export default {
     components: {
-      Laptop,
-      Server
+      AnnotatedIcon,
+      RightArrow
     }
   }
 </script>

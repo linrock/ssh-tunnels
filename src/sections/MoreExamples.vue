@@ -4,13 +4,12 @@
       header
         h2 More examples and use cases
 
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | remote server
+      .flow-diagram
+        annotated-icon(type="laptop" annotation="localhost:8080" color="#00dcff")
+        right-arrow
+        annotated-icon(type="server" annotation="remote-host-1" color="rgb(255,141,0)")
+        right-arrow
+        annotated-icon(type="server" annotation="remote-host-2:80" color="rgb(255,141,0)")
 
       p
         | More examples and use cases for SSH tunnels
@@ -18,13 +17,13 @@
 </template>
 
 <script>
-  import Laptop from '../icons/Laptop'
-  import Server from '../icons/Server'
+  import AnnotatedIcon from '../diagrams/annotated_icon'
+  import RightArrow from '../diagrams/right_arrow'
 
   export default {
     components: {
-      Laptop,
-      Server
+      AnnotatedIcon,
+      RightArrow
     }
   }
 </script>

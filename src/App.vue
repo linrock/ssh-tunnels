@@ -78,4 +78,7 @@
     width 680px
     margin 0 auto
 
+  .flow-diagram
+    display flex
+
 </style>

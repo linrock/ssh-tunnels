@@ -5,17 +5,12 @@
         h2 Jump hosts and proxy commands
         h3 Transparently connecting to a remote host through an intermediate
 
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | jump-host
-
-      div
-        server
-        | remote-host
+      .flow-diagram
+        annotated-icon(type="laptop" annotation="localhost:8080" color="#00dcff")
+        right-arrow
+        annotated-icon(type="server" annotation="user1@jump-host" color="rgb(255,141,0)")
+        right-arrow
+        annotated-icon(type="server" annotation="user2@remote-host" color="rgb(255,141,0)")
 
       p
         | Using a jump host to connect to remote-host through jump-host
@@ -28,13 +23,13 @@
 </template>
 
 <script>
-  import Laptop from '../icons/Laptop'
-  import Server from '../icons/Server'
+  import AnnotatedIcon from '../diagrams/annotated_icon'
+  import RightArrow from '../diagrams/right_arrow'
 
   export default {
     components: {
-      Laptop,
-      Server
+      AnnotatedIcon,
+      RightArrow
     }
   }
 </script>

@@ -5,13 +5,10 @@
         h2 Remote port forwarding
         h3 Forwards a port on a remote system to another system
 
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | remote server
+      .flow-diagram
+        annotated-icon(type="server" annotation="remote-host-1:8080" color="rgb(255,141,0)")
+        right-arrow
+        annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
 
       div
         p Fowards port 8080 on remote-host-1 to localhost port 80 on your local computer.
@@ -31,13 +28,13 @@
 </template>
 
 <script>
-  import Laptop from '../icons/Laptop'
-  import Server from '../icons/Server'
+  import AnnotatedIcon from '../diagrams/annotated_icon'
+  import RightArrow from '../diagrams/right_arrow'
 
   export default {
     components: {
-      Laptop,
-      Server
+      AnnotatedIcon,
+      RightArrow
     }
   }
 </script>
