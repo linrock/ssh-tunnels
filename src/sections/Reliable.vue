@@ -1,10 +1,8 @@
 <template lang="pug">
-  section.dynamic-port-forwarding
+  section.reliable-ssh-tunnels
     .container
-      h2 Dynamic port forwarding
-
-      div AKA socks proxies
-
+      h2 Reliable SSH Tunnels
+      
       div
         | Socks proxy
         code ssh -D 3000 remote-host.com
@@ -36,7 +34,7 @@
 </script>
 
 <style scoped lang="stylus">
-  .dynamic-port-forwarding
+  .reliable-ssh-tunnels
     background #222
     padding 30px 0
 

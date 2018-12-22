@@ -1,17 +1,15 @@
 <template lang="pug">
-  section.dynamic-port-forwarding
+  section.jump-hosts
     .container
-      h2 Dynamic port forwarding
-
-      div AKA socks proxies
-
-      div
-        | Socks proxy
-        code ssh -D 3000 remote-host.com
+      h2 Jump hosts
 
       div
         | Using a jump host
         code ssh -D 3000 -J user@jump-host.com remote-host.com
+
+      div
+        | Need to add this to your sshd_config on your remote server
+        code GatewayPorts yes
 
       div
         laptop
@@ -36,8 +34,8 @@
 </script>
 
 <style scoped lang="stylus">
-  .dynamic-port-forwarding
-    background #222
+  .local-port-forwarding
+    background #333
     padding 30px 0
 
   h3

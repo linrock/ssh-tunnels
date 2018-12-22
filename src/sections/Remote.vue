@@ -1,31 +1,26 @@
-<template>
-  <section class="local-port-forwarding">
-    <div class="container">
-      <h2>Remote port forwarding</h2>
+<template lang="pug">
+  section.local-port-forwarding
+    .container
+      h2 Remote port forwarding
 
-      <div>
-        <p>
-          Fowards port 8080 on remote-host-1.com to localhost port 80 on your local computer.
-        </p>
-        <code>ssh -R 8080:localhost:80 remote-host-1.com</code>
+      div
+        p Fowards port 8080 on remote-host-1.com to localhost port 80 on your local computer.
+        code ssh -R 8080:localhost:80 remote-host-1.com
 
-        <code>ssh -R 1.2.3.4:8080:localhost:80 remote-host-2.com</code>
-      </div>
+        code ssh -R 1.2.3.4:8080:localhost:80 remote-host-2.com
 
-      <div>
-        Need to add this to your sshd_config on your remote server
-        <code>GatewayPorts yes</code>
-      </div>
+      div
+        | Need to add this to your sshd_config on your remote server
+        code GatewayPorts yes
 
-      <div>
-        <laptop/> localhost
-      </div>
+      div
+        laptop
+        | localhost
 
-      <div>
-        <server/> remote server
-      </div>
-    </div>
-  </section>
+      div
+        server
+        | remote server
+
 </template>
 
 <script>

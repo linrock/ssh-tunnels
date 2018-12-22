@@ -1,37 +1,32 @@
-<template>
-  <section class="local-port-forwarding">
-    <div class="container">
-      <h2>Local port forwarding</h2>
+<template lang="pug">
+  section.local-port-forwarding
+    .container
+      h2 Local port forwarding
 
-      <div>
-        <p>
-          Forwards port 8080 on your local computer to port 80 on
-          remote-host-2.com through remote-host-1.com
-        </p>
-        <code>ssh -L 8080:remote-host-2.com:80 remote-host-1.com</code>
+      div
+        p
+          | Forwards port 8080 on your local computer to port 80 on
+          | remote-host-2.com through remote-host-1.com
+        code ssh -L 8080:remote-host-2.com:80 remote-host-1.com
 
-        <p>
-          Forwards only localhost port 8080 on your local computer to
-          port 80 on remote-host-2.com through remote-host-1.com
-        </p>
-        <code>ssh -L 127.0.0.1:8080:remote-host-2.com:80 remote-host-1.com</code>
+        p
+          | Forwards only localhost port 8080 on your local computer to
+          | port 80 on remote-host-2.com through remote-host-1.com
+        code ssh -L 127.0.0.1:8080:remote-host-2.com:80 remote-host-1.com
 
-        <p>
-          Forwards only localhost port 8080 on your local computer to
-          localhost port 80 on remote-host-1.com
-        </p>
-        <code>ssh -L 127.0.0.1:8080:localhost:80 remote-host-1.com</code>
-      </div>
+        p
+          | Forwards only localhost port 8080 on your local computer to
+          | localhost port 80 on remote-host-1.com
+        code ssh -L 127.0.0.1:8080:localhost:80 remote-host-1.com
 
-      <div>
-        <laptop/> localhost
-      </div>
+      div
+        laptop
+        | localhost
 
-      <div>
-        <server/> remote server
-      </div>
-    </div>
-  </section>
+      div
+        server
+        | remote server
+
 </template>
 
 <script>

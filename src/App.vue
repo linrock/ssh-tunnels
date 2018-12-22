@@ -4,6 +4,8 @@
     <Local/>
     <Remote/>
     <Dynamic/>
+    <JumpHosts/>
+    <Reliable/>
   </div>
 </template>
 
@@ -12,6 +14,8 @@
   import Local from './sections/Local.vue'
   import Remote from './sections/Remote.vue'
   import Dynamic from './sections/Dynamic.vue'
+  import JumpHosts from './sections/JumpHosts.vue'
+  import Reliable from './sections/Reliable.vue'
 
   export default {
     name: 'app',
@@ -19,7 +23,9 @@
       Introduction,
       Local,
       Remote,
-      Dynamic
+      Dynamic,
+      JumpHosts,
+      Reliable,
     }
   }
 </script>
