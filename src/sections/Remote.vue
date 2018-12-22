@@ -6,6 +6,14 @@
         h3 Forwards a port on a remote system to another system
 
       div
+        laptop
+        | localhost
+
+      div
+        server
+        | remote server
+
+      div
         p Fowards port 8080 on remote-host-1 to localhost port 80 on your local computer.
         code ssh -R 8080:localhost:80 remote-host-1
 
@@ -19,14 +27,6 @@
         | You'll need to add this to your sshd_config on your remote server to forward
         | public internet traffic to your local computer.
         code GatewayPorts yes
-
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | remote server
 
 </template>
 

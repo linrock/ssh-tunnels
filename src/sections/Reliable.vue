@@ -3,7 +3,15 @@
     .container
       header
         h2 Reliable SSH Tunnels
-        h3 How to bring connections back when they drop
+        h3 How to keep SSH tunnels open
+
+      div
+        laptop
+        | localhost
+
+      div
+        server
+        | remote server
 
       p
         | The commands listed above are great on an ad-hoc basis, but if
@@ -33,14 +41,6 @@
       div
         | Use autossh to monitor and bring back connections if they drop
         code autossh -D 3000 remote-host.com
-
-      div
-        laptop
-        | localhost
-
-      div
-        server
-        | remote server
 
 </template>
 

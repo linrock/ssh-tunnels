@@ -6,6 +6,7 @@
     Dynamic
     JumpHosts
     Reliable
+    MoreExamples
 
 </template>
 
@@ -16,6 +17,7 @@
   import Dynamic from './sections/Dynamic.vue'
   import JumpHosts from './sections/JumpHosts.vue'
   import Reliable from './sections/Reliable.vue'
+  import MoreExamples from './sections/MoreExamples.vue'
 
   export default {
     name: 'app',
@@ -26,6 +28,7 @@
       Dynamic,
       JumpHosts,
       Reliable,
+      MoreExamples
     }
   }
 </script>
@@ -38,6 +41,7 @@
 
   svg
     width 30px
+    height 30px
 
   code
     background #111

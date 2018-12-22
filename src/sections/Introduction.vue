@@ -14,22 +14,21 @@
       | throughout this guide, the following icons and colors will be used
       | to hopefully make it more clear which commands are run on which.
 
-    div
-      laptop
-      | localhost
-
-    div
-      server
-      | remote server
+    p
+      annotated-icon(type="laptop" annotation="localhost" color="#00dcff")
+    p
+      annotated-icon(type="server" annotation="example.org" color="rgb(255,141,0)")
 
 </template>
 
 <script>
   import Laptop from '../icons/Laptop'
   import Server from '../icons/Server'
+  import AnnotatedIcon from '../diagrams/annotated_icon'
 
   export default {
     components: {
+      AnnotatedIcon,
       Laptop,
       Server
     }

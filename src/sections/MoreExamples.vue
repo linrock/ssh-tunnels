@@ -1,9 +1,8 @@
 <template lang="pug">
-  section#dynamic-port-forwarding
+  section#more-examples
     .container
       header
-        h2 Dynamic port forwarding
-        h3 Forward traffic from a range of ports to a remote server
+        h2 More examples and use cases
 
       div
         laptop
@@ -14,12 +13,7 @@
         | remote server
 
       p
-        | Also known as a SOCKS proxy, this allows you to forward
-        code ssh -D 3000 remote-host.com
-
-      p
-        | Using a jump host
-        code ssh -D 3000 -J user@jump-host.com remote-host.com
+        | More examples and use cases for SSH tunnels
 
 </template>
 
@@ -37,6 +31,6 @@
 
 <style scoped lang="stylus">
   section
-    background #222
+    background #333
 
 </style>
