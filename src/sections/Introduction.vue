@@ -10,6 +10,14 @@
       a(href="#reliable-ssh-tunnels") Reliable SSH tunnels
 
     p
+      | SSH tunnels are encrypted TCP connections between SSH clients and servers.
+      | Typical use cases include
+      ul
+        li providing encrypted channels for otherwise plaintext connections
+        li bypassing firewalls
+        li opening backdoors into private networks
+
+    p
       | SSH commands can be run from both local or remote systems.
       | Throughout this guide, the following icons and colors will be used
       | to hopefully make it more clear which commands are run on which system,
