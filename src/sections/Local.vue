@@ -1,7 +1,21 @@
 <template lang="pug">
-  section.local-port-forwarding
+  section#local-port-forwarding
     .container
-      h2 Local port forwarding
+      header
+        h2 Local port forwarding
+        h3 Forwards a port on a local system to a remote system
+
+      div
+        laptop
+        | localhost
+
+      div
+        server
+        | remote-host-1.com
+
+      div
+        server
+        | remote-host-2.com
 
       div
         p
@@ -20,12 +34,23 @@
         code ssh -L 127.0.0.1:8080:localhost:80 remote-host-1.com
 
       div
-        laptop
-        | localhost
+        p
+          | Make sure that port forwarding is enabled on your local system
+        code
+          | AllowTcpForwarding yes
 
-      div
-        server
-        | remote server
+      h4 Use cases
+      p
+        | If you want to use a secure connection to access a remote service
+        | that typically communicates over plaintext services. For example,
+        | postgres, redis, memcached all use plaintext. If you run one of these
+        | services, instead of having it listen on an address accessible to the
+        | public internet, you can tunnel a connection from your local system
+        | instead.
+
+      p
+        | If you want to transparently access a resource through remote-host-1 without
+        | setting up a proxy.
 
 </template>
 
@@ -42,26 +67,7 @@
 </script>
 
 <style scoped lang="stylus">
-  .local-port-forwarding
+  section
     background #444
-    padding 30px 0
-
-  h3
-    margin 40px 0 0
-
-  nav
-    a
-      display block
-
-  ul
-    list-style-type none
-    padding 0
-
-  li
-    display inline-block
-    margin 0 10px
-
-  a
-    color #42b983
 
 </style>

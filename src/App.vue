@@ -1,12 +1,12 @@
-<template>
-  <div id="app">
-    <Introduction/>
-    <Local/>
-    <Remote/>
-    <Dynamic/>
-    <JumpHosts/>
-    <Reliable/>
-  </div>
+<template lang="pug">
+  #app
+    Introduction
+    Local
+    Remote
+    Dynamic
+    JumpHosts
+    Reliable
+
 </template>
 
 <script>
@@ -44,12 +44,25 @@
     color white
     display block
     font-size 15px
+    line-height 24px
     padding 10px 18px
     margin 20px 0
     border-radius 2px
 
   p
-    line-height 26px
+    line-height 24px
+    margin 20px 0
+
+  section
+    padding 30px 0
+    header
+      margin-bottom 40px
+      h2
+        margin 0
+      h3
+        font-style italic
+        font-weight normal
+        margin 0
 
   #app
     font-family 'Avenir', Helvetica, Arial, sans-serif
@@ -58,7 +71,7 @@
     margin-bottom 60px
 
   .container
-    width 600px
+    width 680px
     margin 0 auto
 
 </style>

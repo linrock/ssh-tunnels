@@ -1,12 +1,12 @@
 <template lang="pug">
-  section.dynamic-port-forwarding
+  section#dynamic-port-forwarding
     .container
-      h2 Dynamic port forwarding
-
-      div AKA socks proxies
+      header
+        h2 Dynamic port forwarding
+        h3 Port forwarding across a range of ports
 
       div
-        | Socks proxy
+        | Also known as a SOCKS proxy, this allows you to forward
         code ssh -D 3000 remote-host.com
 
       div
@@ -36,36 +36,7 @@
 </script>
 
 <style scoped lang="stylus">
-  .dynamic-port-forwarding
+  section
     background #222
-    padding 30px 0
-
-  h3
-    margin 40px 0 0
-
-  nav
-    a
-      display block
-
-  ul
-    list-style-type none
-    padding 0
-
-  li
-    display inline-block
-    margin 0 10px
-
-  a
-    color #42b983
-
-  svg
-    width 40px
-
-  code
-    background #111
-    color white
-    font-size 16px
-    padding 10px 18px
-    border-radius 2px
 
 </style>

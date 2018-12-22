@@ -3,11 +3,11 @@
     h1 A visual guide to SSH tunnels
 
     nav
-      a(href="#") Local port forwarding
-      a(href="#") Remote port forwarding
-      a(href="#") Dynamic port forwarding
-      a(href="#") Combining SSH tunnels
-      a(href="#") Reliable SSH tunnels
+      a(href="#local-port-forwarding") Local port forwarding
+      a(href="#remote-port-forwarding") Remote port forwarding
+      a(href="#dynamic-port-forwarding") Dynamic port forwarding
+      a(href="#jump-hosts") Jump hosts and proxy commands
+      a(href="#reliable-ssh-tunnels") Reliable SSH tunnels
 
     p
       | Since SSH commands can be run from either local or remote systems,

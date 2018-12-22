@@ -1,16 +1,23 @@
 <template lang="pug">
-  section.local-port-forwarding
+  section#remote-port-forwarding
     .container
-      h2 Remote port forwarding
+      header
+        h2 Remote port forwarding
+        h3 Forwards a port on a remote system to another system
 
       div
-        p Fowards port 8080 on remote-host-1.com to localhost port 80 on your local computer.
-        code ssh -R 8080:localhost:80 remote-host-1.com
+        p Fowards port 8080 on remote-host-1 to localhost port 80 on your local computer.
+        code ssh -R 8080:localhost:80 remote-host-1
 
-        code ssh -R 1.2.3.4:8080:localhost:80 remote-host-2.com
+        p
+          | Fowards port 8080 on remote-host-1 to localhost port 80
+          | on your local computer while only allowing access from IP 1.2.3.4.
+        code ssh -R 1.2.3.4:8080:localhost:80 remote-host-2
 
       div
-        | Need to add this to your sshd_config on your remote server
+        | By default, forwarded ports are not accessible to the public internet.
+        | You'll need to add this to your sshd_config on your remote server to forward
+        | public internet traffic to your local computer.
         code GatewayPorts yes
 
       div
@@ -36,36 +43,7 @@
 </script>
 
 <style scoped lang="stylus">
-  .local-port-forwarding
+  section
     background #333
-    padding 30px 0
-
-  h3
-    margin 40px 0 0
-
-  nav
-    a
-      display block
-
-  ul
-    list-style-type none
-    padding 0
-
-  li
-    display inline-block
-    margin 0 10px
-
-  a
-    color #42b983
-
-  svg
-    width 40px
-
-  code
-    background #111
-    color white
-    font-size 16px
-    padding 10px 18px
-    border-radius 2px
 
 </style>

@@ -1,15 +1,38 @@
 <template lang="pug">
-  section.reliable-ssh-tunnels
+  section#reliable-ssh-tunnels
     .container
-      h2 Reliable SSH Tunnels
-      
-      div
-        | Socks proxy
-        code ssh -D 3000 remote-host.com
+      header
+        h2 Reliable SSH Tunnels
+        h3 How to bring connections back when they drop
+
+      p
+        | The commands listed above are great on an ad-hoc basis, but if
+        | you want to maintain SSH tunnels through network outages, you'll
+        | have to do some additional work
+
+      p
+        | By default, the TCP connection used to establish an SSH tunnel
+        | may time out after a period of inactivity. To prevent timeouts
+
+      p
+        | You can configure the server to send heartbeat messages
+
+      code
+        | ServerAliveInterval 15
+        br
+        | ServerAliveCountMax 4
+
+      p
+        | You can also configure the client to send heartbeat messages
+
+      code
+        | ClientAliveInterval 15
+        br
+        | ClientAliveCountMax 4
 
       div
-        | Using a jump host
-        code ssh -D 3000 -J user@jump-host.com remote-host.com
+        | Use autossh to monitor and bring back connections if they drop
+        code autossh -D 3000 remote-host.com
 
       div
         laptop
@@ -34,36 +57,7 @@
 </script>
 
 <style scoped lang="stylus">
-  .reliable-ssh-tunnels
+  section
     background #222
-    padding 30px 0
-
-  h3
-    margin 40px 0 0
-
-  nav
-    a
-      display block
-
-  ul
-    list-style-type none
-    padding 0
-
-  li
-    display inline-block
-    margin 0 10px
-
-  a
-    color #42b983
-
-  svg
-    width 40px
-
-  code
-    background #111
-    color white
-    font-size 16px
-    padding 10px 18px
-    border-radius 2px
 
 </style>

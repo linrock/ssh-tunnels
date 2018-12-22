@@ -1,15 +1,17 @@
 <template lang="pug">
-  section.jump-hosts
+  section#jump-hosts
     .container
-      h2 Jump hosts
+      header
+        h2 Jump hosts and proxy commands
+        h3 Transparently connecting to a remote host through an intermediate
 
       div
-        | Using a jump host
-        code ssh -D 3000 -J user@jump-host.com remote-host.com
+        | Using a jump host to connect to remote-host through jump-host
+        code ssh -J user1@jump-host user2@remote-host
 
       div
-        | Need to add this to your sshd_config on your remote server
-        code GatewayPorts yes
+        | Connecting to a remote server through a SOCKS proxy
+        code ssh -o ProxyCommand="nc -X 5 -x localhost:3000 %h %p" user@remote-host
 
       div
         laptop
@@ -17,7 +19,11 @@
 
       div
         server
-        | remote server
+        | jump-host
+
+      div
+        server
+        | remote-host
 
 </template>
 
@@ -34,36 +40,7 @@
 </script>
 
 <style scoped lang="stylus">
-  .local-port-forwarding
+  section
     background #333
-    padding 30px 0
-
-  h3
-    margin 40px 0 0
-
-  nav
-    a
-      display block
-
-  ul
-    list-style-type none
-    padding 0
-
-  li
-    display inline-block
-    margin 0 10px
-
-  a
-    color #42b983
-
-  svg
-    width 40px
-
-  code
-    background #111
-    color white
-    font-size 16px
-    padding 10px 18px
-    border-radius 2px
 
 </style>
