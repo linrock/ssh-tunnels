@@ -5,18 +5,26 @@
         h2 Dynamic port forwarding
         h3 Forward traffic from a range of ports to a remote server
 
-      .flow-diagram
-        annotated-icon(type="laptop" annotation="localhost:3000" color="#00dcff")
-        right-arrow(ssh="true")
-        annotated-icon(type="server" annotation="remote-host-1.com" color="rgb(255,141,0)")
+      .example
+        code ssh -D 3000 ssh-server
+        .flow-diagram
+          annotated-icon(type="laptop" annotation="localhost:3000" color="#00dcff")
+          right-arrow(ssh="true")
+          annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
+          right-arrow
+          annotated-icon(type="cloud" annotation="*:*")
+        p
+          | Also known as a SOCKS proxy, this allows you to forward traffic sent
+          | through the proxy to the ssh-server on any port or destination. By default,
+          | SSH will use the SOCKS5 protocol, which forwards TCP and UDP traffic.
 
       p
-        | Also known as a SOCKS proxy, this allows you to forward
-        code ssh -D 3000 remote-host.com
-
-      p
-        | Using a jump host
-        code ssh -D 3000 -J user@jump-host.com remote-host.com
+        | When you have a SOCKS proxy running, you can configure your web browser
+        | to use the proxy to access resources as if connections were originating
+        | from ssh-server. For example, if ssh-server had access to other servers
+        | within a private network, by using using a SOCKS proxy you could access
+        | those other servers locally as if you were on the network, without needing
+        | to set up a VPN.
 
 </template>
 

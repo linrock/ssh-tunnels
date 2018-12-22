@@ -12,12 +12,12 @@
           right-arrow(ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
-          annotated-icon(type="server" annotation="example.org:80" color="rgb(255,141,0)")
+          annotated-icon(type="cloud" annotation="example.org:80")
         p
           | Forwards connections to 127.0.0.1:8080 on your local system
-          | to port 80 on example.org through ssh-server. The connection
-          | between your local system and ssh-server is encrypted within
-          | an SSH tunnel, but not between ssh-server and example.org
+          | to port 80 on example.org through ssh-server. The traffic between your
+          | local system and ssh-server is wrapped in an SSH tunnel,
+          | but the traffic between ssh-server and example.org is not.
 
       .example
         code ssh -L 8080:example.org:80 ssh-server
@@ -26,7 +26,7 @@
           right-arrow(ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
-          annotated-icon(type="server" annotation="example.org:80" color="rgb(255,141,0)")
+          annotated-icon(type="cloud" annotation="example.org:80")
         p
           | Forwards connections to port 8080 on all interfaces on your local system
           | to port 80 on example.org through ssh-server

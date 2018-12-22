@@ -61,6 +61,7 @@
     header
       margin-bottom 40px
       h2
+        font-size 1.7em
         margin 0
       h3
         font-style italic

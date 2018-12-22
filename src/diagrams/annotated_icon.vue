@@ -4,13 +4,16 @@
       laptop
     template(v-else-if="type === `server`")
       server
-    span {{ annotation }}
+    template(v-else-if="type === `cloud`")
+      cloud
+    span(v-if="annotation && annotation.length > 0") {{ annotation }}
 
 </template>
 
 <script>
   import Laptop from '../icons/Laptop'
   import Server from '../icons/Server'
+  import Cloud from '../icons/Cloud'
 
   export default {
     props: {
@@ -30,7 +33,8 @@
 
     components: {
       Laptop,
-      Server
+      Server,
+      Cloud
     }
   }
 </script>

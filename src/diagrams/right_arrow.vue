@@ -1,10 +1,9 @@
 <template lang="pug">
   .diagram-right-arrow
-    template(v-if="ssh")
-      .label
+    template(v-if="ssh || secure")
+      .label(v-if="ssh")
         lock.lock
-        span SSH
-      right-arrow-short.right-arrow-short
+      right-arrow.right-arrow-short
     template(v-else)
       right-arrow
 
@@ -18,6 +17,10 @@
   export default {
     props: {
       ssh: {
+        type: Boolean,
+        required: false,
+      },
+      secure: {
         type: Boolean,
         required: false,
       }
@@ -48,6 +51,7 @@
       align-items center
       display flex
       color lightgreen
+      margin-right 7px
 
       .lock
         height 12px
@@ -57,8 +61,6 @@
         margin-left 3px
 
     .right-arrow-short
-      height 13px
-      margin-left 5px
       path
         fill lightgreen
 
