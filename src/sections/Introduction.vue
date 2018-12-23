@@ -10,12 +10,26 @@
       a(href="#reliable-ssh-tunnels") Reliable SSH tunnels
 
     p
-      | SSH tunnels are encrypted TCP connections between SSH clients and servers.
-      | Typical use cases include
+      | This page is meant to present concrete use cases and examples of SSH tunnels
+      | while visually presenting the traffic flows. For example, here's a reverse SSH
+      | tunnel that allows a user from IP address 1.2.3.4 access to a local system.
+
+    .flow-diagram
+      annotated-icon(type="user" annotation="1.2.3.4")
+      right-arrow
+      annotated-icon(type="server" annotation="ssh-server:8080" color="rgb(255,141,0)")
+      right-arrow(ssh="true")
+      annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
+    p
+      | SSH tunnels are encrypted TCP connections between SSH clients and servers
+      | that allows traffic entering one side of the tunnel to transparently exit
+      | through the other. While the term originally referred to tunnels using TUN/TAP virtual
+      | network interfaces, it's commonly used to refer to SSH port forwarding nowadays.
+      | Typical use cases include:
       ul
-        li providing encrypted channels for otherwise plaintext connections
-        li bypassing firewalls
+        li providing encrypted channels for protocols that use plaintext
         li opening backdoors into private networks
+        li bypassing firewalls
 
     p
       | SSH commands can be run from both local or remote systems.
@@ -28,31 +42,18 @@
     p
       annotated-icon(type="server" annotation="example.org" color="rgb(255,141,0)")
 
-    p
-      | Useful ssh commandline options when establishing tunnels
-    code
-      | -f
-      |   # forks the ssh process into the background
-      br
-      | -n
-      |   # prevents reading from STDIN
-      br
-      | -N
-      |  # do not run remote commands. Used when only forwarding ports
-      br
-      | -T
-      |  # disable TTY allocation
-
 </template>
 
 <script>
   import Laptop from '../icons/Laptop'
   import Server from '../icons/Server'
   import AnnotatedIcon from '../diagrams/annotated_icon'
+  import RightArrow from '../diagrams/right_arrow'
 
   export default {
     components: {
       AnnotatedIcon,
+      RightArrow,
       Laptop,
       Server
     }

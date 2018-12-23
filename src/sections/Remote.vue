@@ -15,9 +15,9 @@
           annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
         p
           | Fowards traffic to all interfaces on port 8080 on ssh-server to
-          | localhost port 80 on your local computer. If one of these interfaces
-          | is publicly accessible, then anyone can connect to this port to
-          | the end of the tunnel.
+          | localhost port 80 on your local computer. If one of these interfaces is available
+          | to the public internet, traffic connecting to port 8080 will be forwarded to your
+          | local system.
 
       .example
         code ssh -R 1.2.3.4:8080:localhost:80 ssh-server
@@ -30,7 +30,8 @@
         p
           | Fowards traffic to ssh-server:8080 to localhost:80 on your local system
           | while only allowing access to the SSH tunnel entrance on ssh-server
-          | from IP address 1.2.3.4
+          | from IP address 1.2.3.4. Use The GatewayPorts clientspecified directive
+          | with this.
 
       .example
         code ssh -R 8080:example.org:80 ssh-server

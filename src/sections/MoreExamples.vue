@@ -5,8 +5,13 @@
         h2 More examples and use cases
 
       .example
+        h4 UDP over SSH tunnels
         p
-          | Transparent access to remote resource accessible only through a private network.
+          | TODO
+
+      .example
+        h4 Transparent access to remote resource on a private network
+        p
           | Let's say there's a git repository on a private network that's only accessible
           | through a private server on the network. This server is not accessible to the public
           | internet. You have direct access to the server, but don't have VPN access to the

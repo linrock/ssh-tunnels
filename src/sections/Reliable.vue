@@ -36,23 +36,33 @@
           | autossh, which builds an SSH tunnel and monitors its health.
         p
           | AutoSSH accepts the same arguments for port forwarding as SSH.
-        code autossh -R 2222:localhost:22 remote-host
+        code autossh -R 2222:localhost:22 ssh-server
         .flow-diagram
-          annotated-icon(type="laptop" annotation="localhost:8080" color="#00dcff")
-          right-arrow(ssh="true")
-          annotated-icon(type="server" annotation="remote-host-1" color="rgb(255,141,0)")
+          annotated-icon(type="users")
           right-arrow
-          annotated-icon(type="server" annotation="remote-host-2:80" color="rgb(255,141,0)")
+          annotated-icon(type="server" annotation="ssh-server:2222" color="rgb(255,141,0)")
+          right-arrow(ssh="true")
+          annotated-icon(type="laptop" annotation="localhost:22" color="#00dcff")
         p
           | This establishes a reverse tunnel that comes back after network failures.
           | By default, AutoSSH will open extra ports on the SSH client and server for
-          | health checks.
+          | health checks. If traffic appears to no longer pass between the health check
+          | ports, AutoSSH will restart the SSH tunnel.
 
       .example
-        code autossh -R 2222:localhost:22 -M 0 remote-host
+        code
+          | autossh -R 2222:localhost:22 \
+          br
+          | &nbsp;&nbsp;-M 0 \
+          br
+          | &nbsp;&nbsp;-o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" \
+          br
+          | &nbsp;&nbsp;remote-host
         p
-          | Disables the health check ports and monitors connection health
-          | a different way.
+          | Disables the health check ports and allows the SSH client to handle the
+          | health checks. In this case, the client expects the server to send a heartbeat
+          | every 10 seconds. If 3 heartbeats fail in a row, the SSH client exits, and
+          | AutoSSH will re-establish a new SSH tunnel.
 
 </template>
 

@@ -18,9 +18,12 @@
           | to port 80 on example.org through ssh-server. The traffic between your
           | local system and ssh-server is wrapped in an SSH tunnel,
           | but the traffic between ssh-server and example.org is not.
+          | From the perspective of example.org the traffic originates from
+          | ssh-server.
 
       .example
         code ssh -L 8080:example.org:80 ssh-server
+        code ssh -L *:8080:example.org:80 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="*:8080" color="#00dcff")
           right-arrow(ssh="true")
@@ -45,25 +48,28 @@
           | from the viewpoint of ssh-server.
 
       .example
-        h4 SSH client configuration
-        annotated-icon(type="laptop" annotation="/etc/ssh/ssh_config" color="#00dcff")
+        h4 SSH configurations
         p
-          | Make sure that port forwarding is enabled on the SSH client of your local system
+          | Make sure that TCP forwarding is enabled on the SSH server. By default it should be.
+        annotated-icon(type="server" annotation="/etc/ssh/sshd_config" color="rgb(255,141,0)")
         code
           | AllowTcpForwarding yes
+        p
+          | If you're forwarding ports on interfaces other than 127.0.0.1 then you'll
+          | need to enable GatewayPorts on your local system, either within ssh_config or as
+          | a command-line option
+        annotated-icon(type="laptop" annotation="/etc/ssh/ssh_config" color="#00dcff")
+        code
+          | GatewayPorts yes
 
       h4 Use cases
       p
         | If you want to use a secure connection to access a remote service
-        | that communicates over plaintext. For example, postgres, redis, memcached
-        | all use plaintext protocols. If you want to make one of these services
-        | accessible remotely, instead of having it speak plaintext over public
-        | networks, you can tunnel a connection from your local system to the remote
-        | server instead.
-
-      p
-        | If you want to transparently access a resource through remote-host-1 without
-        | setting up a proxy.
+        | that communicates over plaintext. For example, redis and memcached
+        | all use plaintext protocols. If you securely access one of these services
+        | on a remote server over public networks, you can tunnel a connection
+        | from your local system to the remote server instead of having it listen
+        | over the public internet.
 
 </template>
 

@@ -1,6 +1,7 @@
 <template lang="pug">
   #app
     Introduction
+    PortForwarding
     Local
     Remote
     Dynamic
@@ -12,6 +13,7 @@
 
 <script>
   import Introduction from './sections/Introduction.vue'
+  import PortForwarding from './sections/PortForwarding.vue'
   import Local from './sections/Local.vue'
   import Remote from './sections/Remote.vue'
   import Dynamic from './sections/Dynamic.vue'
@@ -23,6 +25,7 @@
     name: 'app',
     components: {
       Introduction,
+      PortForwarding,
       Local,
       Remote,
       Dynamic,
