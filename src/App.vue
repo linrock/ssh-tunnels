@@ -43,7 +43,18 @@
   body
     color #fafafa
     background #333
+    font-family 'Avenir', Helvetica, Arial, sans-serif
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
     margin 0
+    padding 0
+
+  a
+    color #42b983
+    color lightgreen
+    text-decoration none
+    &:hover
+      text-decoration underline
 
   h1
     font-size 30px
@@ -79,12 +90,6 @@
         margin 0
     h4
       font-size 18px
-
-  #app
-    font-family 'Avenir', Helvetica, Arial, sans-serif
-    -webkit-font-smoothing antialiased
-    -moz-osx-font-smoothing grayscale
-    margin-bottom 60px
 
   .container
     width 680px

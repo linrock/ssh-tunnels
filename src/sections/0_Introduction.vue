@@ -4,13 +4,26 @@
       h1 A visual guide to SSH tunnels
 
       nav
-        a(href="#local-port-forwarding") Local port forwarding
-        a(href="#remote-port-forwarding") Remote port forwarding
-        a(href="#dynamic-port-forwarding") Dynamic port forwarding
-        a(href="#jump-hosts") Jump hosts
-        a(href="#reliable-ssh-tunnels") Reliable SSH tunnels
-        a(href="#more-examples") More examples
-        a(href="#resources") Resources
+        ul
+          li
+            a(href="#introduction") Introduction
+          li
+            a(href="#port-forwarding") Port forwarding
+            ul
+              li
+                a(href="#local-port-forwarding") Local
+              li
+                a(href="#remote-port-forwarding") Remote
+              li
+                a(href="#dynamic-port-forwarding") Dynamic
+          li
+            a(href="#jump-hosts") Jump hosts
+          li
+            a(href="#reliable-ssh-tunnels") Reliable SSH tunnels
+          li
+            a(href="#more-examples") More examples
+          li
+            a(href="#resources") Resources
 
       p
         | This page is meant to present concrete use cases and examples of SSH tunnels
@@ -65,13 +78,13 @@
 </script>
 
 <style scoped lang="stylus">
+  section
+    background #222
+
   .container
     padding 10px 0 30px
 
   nav
     margin 30px 0
-    a
-      color #42b983
-      display block
 
 </style>

@@ -79,6 +79,6 @@
 
 <style scoped lang="stylus">
   section
-    background #222
+    background #333
 
 </style>

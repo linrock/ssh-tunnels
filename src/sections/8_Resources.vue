@@ -4,8 +4,10 @@
       header
         h2 Resources
       ul
-        li OpenSSH cookbook
-        li AutoSSH
+        li
+          a(href="https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Tunnels") OpenSSH cookbook
+        li
+          a AutoSSH
 
 </template>
 
