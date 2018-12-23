@@ -1,29 +1,9 @@
-# ssh-tunnels-guide
+# Visual guide to SSH tunnels
 
-## Project setup
-```
-yarn install
-```
+Examples and use cases for SSH tunnels with visual explanations
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+This is a work-in-progress. See https://robotmoon.com/ssh-tunnels/
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+# License
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+MIT
