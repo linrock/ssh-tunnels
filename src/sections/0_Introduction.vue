@@ -26,10 +26,9 @@
             a(href="#resources") Resources
 
       p
-        | This page is meant to present concrete use cases and examples of SSH tunnels
-        | while visually presenting the traffic flows. For example, here's a reverse
-        | tunnel that allows only users from IP address 1.2.3.4 access to port 80 on the SSH
-        | client through an SSH server.
+        | This page explains use cases and examples of SSH tunnels while visually presenting
+        | the traffic flows. For example, here's a reverse tunnel that allows only users from
+        | IP address 1.2.3.4 access to port 80 on the SSH client through an SSH server.
 
       .flow-diagram
         annotated-icon(type="user" annotation="1.2.3.4")
@@ -42,22 +41,15 @@
         | that allows traffic entering one side of the tunnel to transparently exit
         | through the other. While the term originally referred to tunnels using TUN/TAP virtual
         | network interfaces, it's commonly used to refer to SSH port forwarding nowadays.
-        | Typical use cases include:
+        | Use cases include:
         ul
-          li providing encrypted channels for protocols that use plaintext
-          li opening backdoors into private networks
-          li bypassing firewalls
+          li Providing encrypted channels for protocols that use plaintext
+          li Opening backdoors into private networks
+          li Bypassing firewalls
 
       p
-        | SSH commands can be run from both local or remote systems.
-        | Throughout this guide, the following icons and colors will be used
-        | to hopefully make it more clear which commands are run on which system,
-        | and to represent how the resulting TCP traffic flows between systems.
-
-      p
-        annotated-icon(type="laptop" annotation="localhost" color="#00dcff")
-      p
-        annotated-icon(type="server" annotation="example.org" color="rgb(255,141,0)")
+        | This page is a work-in-progress. Feel free to&nbsp;
+        a(href="https://github.com/linrock/ssh-tunnels") suggest examples or corrections on Github
 
 </template>
 

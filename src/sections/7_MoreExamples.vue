@@ -5,11 +5,6 @@
         h2 More examples and use cases
 
       .example
-        h4 UDP over SSH tunnels
-        p
-          | TODO
-
-      .example
         h4 Transparent access to remote resource on a private network
         p
           | Let's say there's a git repository on a private network that's only accessible
@@ -73,6 +68,11 @@
         p
           | Now you have access to the private git repository as if you were on the private
           | network.
+
+      .example
+        h4 UDP over SSH tunnels
+        p
+          | TODO
 
 </template>
 

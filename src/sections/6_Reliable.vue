@@ -59,10 +59,10 @@
           br
           | &nbsp;&nbsp;remote-host
         p
-          | Disables the health check ports and allows the SSH client to handle the
-          | health checks. In this case, the client expects the server to send a heartbeat
-          | every 10 seconds. If 3 heartbeats fail in a row, the SSH client exits, and
-          | AutoSSH will re-establish a new SSH tunnel.
+          | Using the -M 0 flag disables the health check ports and allows the SSH client
+          | to handle the health checks. In this example, the SSH client expects the server
+          | to send a heartbeat every 10 seconds. If 3 heartbeats fail in a row, the SSH client
+          | exits, and AutoSSH will re-establish a new connection.
 
 </template>
 
