@@ -67,6 +67,8 @@
         font-style italic
         font-weight normal
         margin 0
+    h4
+      font-size 18px
 
   #app
     font-family 'Avenir', Helvetica, Arial, sans-serif

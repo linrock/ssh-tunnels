@@ -29,7 +29,7 @@
           annotated-icon(type="cloud" annotation="example.org:80")
         p
           | Forwards connections to port 8080 on all interfaces on your local system
-          | to port 80 on example.org through ssh-server
+          | to example.org:80 through a tunnel to ssh-server.
 
       .example
         code ssh -L 192.168.0.1:5432:127.0.0.1:5432 ssh-server
@@ -44,9 +44,11 @@
           | 127.0.0.1:5432 on ssh-server. Note that 127.0.0.1 here is localhost
           | from the viewpoint of ssh-server.
 
-      div
+      .example
+        h4 SSH client configuration
+        annotated-icon(type="laptop" annotation="/etc/ssh/ssh_config" color="#00dcff")
         p
-          | Make sure that port forwarding is enabled in /etc/ssh_config on your local system
+          | Make sure that port forwarding is enabled on the SSH client of your local system
         code
           | AllowTcpForwarding yes
 

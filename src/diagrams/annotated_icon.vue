@@ -1,11 +1,6 @@
 <template lang="pug">
   .annotated-icon(:style="[{ color }]")
-    template(v-if="type === `laptop`")
-      laptop
-    template(v-else-if="type === `server`")
-      server
-    template(v-else-if="type === `cloud`")
-      cloud
+    component(:is="type")
     span(v-if="annotation && annotation.length > 0") {{ annotation }}
 
 </template>
@@ -14,6 +9,8 @@
   import Laptop from '../icons/Laptop'
   import Server from '../icons/Server'
   import Cloud from '../icons/Cloud'
+  import Users from '../icons/Users'
+  import User from '../icons/User'
 
   export default {
     props: {
@@ -34,7 +31,9 @@
     components: {
       Laptop,
       Server,
-      Cloud
+      Cloud,
+      Users,
+      User
     }
   }
 </script>

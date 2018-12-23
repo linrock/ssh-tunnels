@@ -28,6 +28,21 @@
     p
       annotated-icon(type="server" annotation="example.org" color="rgb(255,141,0)")
 
+    p
+      | Useful ssh commandline options when establishing tunnels
+    code
+      | -f
+      |   # forks the ssh process into the background
+      br
+      | -n
+      |   # prevents reading from STDIN
+      br
+      | -N
+      |  # do not run remote commands. Used when only forwarding ports
+      br
+      | -T
+      |  # disable TTY allocation
+
 </template>
 
 <script>
