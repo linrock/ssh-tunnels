@@ -14,7 +14,7 @@
           right-arrow(ssh="true")
           annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
         p
-          | Fowards traffic to all interfaces on port 8080 on ssh-server to
+          | Forwards traffic to all interfaces on port 8080 on ssh-server to
           | localhost port 80 on your local computer. If one of these interfaces is available
           | to the public internet, traffic connecting to port 8080 will be forwarded to your
           | local system.
@@ -28,7 +28,7 @@
           right-arrow(ssh="true")
           annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
         p
-          | Fowards traffic to ssh-server:8080 to localhost:80 on your local system
+          | Forwards traffic to ssh-server:8080 to localhost:80 on your local system
           | while only allowing access to the SSH tunnel entrance on ssh-server
           | from IP address 1.2.3.4. Use The GatewayPorts clientspecified directive
           | with this.
