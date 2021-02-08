@@ -9,7 +9,7 @@
         code ssh -L 127.0.0.1:8080:example.org:80 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="127.0.0.1:8080" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="cloud" annotation="example.org:80")
@@ -26,7 +26,7 @@
         code ssh -L *:8080:example.org:80 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="*:8080" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="cloud" annotation="example.org:80")
@@ -38,7 +38,7 @@
         code ssh -L 192.168.0.1:5432:127.0.0.1:5432 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="192.168.0.1:5432" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="server" annotation="127.0.0.1:5432" color="rgb(255,141,0)")

@@ -41,7 +41,7 @@
           annotated-icon(type="users")
           right-arrow
           annotated-icon(type="server" annotation="ssh-server:2222" color="rgb(255,141,0)")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="laptop" annotation="localhost:22" color="#00dcff")
         p
           | This establishes a reverse tunnel that comes back after network failures.

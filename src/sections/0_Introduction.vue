@@ -34,7 +34,7 @@
         annotated-icon(type="user" annotation="1.2.3.4")
         right-arrow
         annotated-icon(type="server" annotation="ssh-server:8080" color="rgb(255,141,0)")
-        right-arrow(ssh="true")
+        right-arrow(:ssh="true")
         annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
       p
         | SSH tunnels are encrypted TCP connections between SSH clients and servers

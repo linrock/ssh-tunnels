@@ -27,7 +27,7 @@
         code ssh -L 127.0.0.1:22:127.0.0.1:2222 intermediate-host
         .flow-diagram
           annotated-icon(type="server" annotation="127.0.0.1:2222" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="127.0.0.1:22" color="rgb(255,141,0)")
         p
           | This forwards port 2222 on intermediate-host to port 22 on the private server.
@@ -61,9 +61,9 @@
           | &nbsp;&nbsp;ProxyCommand ssh tunnel@intermediate-host nc %h %p
         .flow-diagram
           annotated-icon(type="laptop" annotation="" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="127.0.0.1:2222" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="127.0.0.1:22" color="rgb(255,141,0)")
         p
           | Now you have access to the private git repository as if you were on the private

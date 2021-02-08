@@ -9,7 +9,7 @@
         h4 Local port forwarding
         .flow-diagram
           annotated-icon(type="laptop" annotation="127.0.0.1:5432" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="server" annotation="127.0.0.1:5432" color="rgb(255,141,0)")
@@ -28,7 +28,7 @@
           annotated-icon(type="users")
           right-arrow
           annotated-icon(type="server" annotation="ssh-server:8080" color="rgb(255,141,0)")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
         p
           | Remote port forwarding allows you to forward traffic on an SSH server
@@ -42,7 +42,7 @@
         h4 Dynamic port forwarding
         .flow-diagram
           annotated-icon(type="laptop" annotation="*:3000" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="cloud" annotation="*:*")
@@ -59,7 +59,7 @@
           | sudo ssh -L 80:example.com:80 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="127.0.0.1:80" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="cloud" annotation="example.com:80")

@@ -9,7 +9,7 @@
         code ssh -D 3000 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="*:3000" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="cloud" annotation="*:*")
@@ -23,7 +23,7 @@
         code ssh -D 127.0.0.1:3000 ssh-server
         .flow-diagram
           annotated-icon(type="laptop" annotation="127.0.0.1:3000" color="#00dcff")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="server" annotation="ssh-server" color="rgb(255,141,0)")
           right-arrow
           annotated-icon(type="cloud" annotation="*:*")

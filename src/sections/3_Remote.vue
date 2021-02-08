@@ -11,7 +11,7 @@
           annotated-icon(type="users")
           right-arrow
           annotated-icon(type="server" annotation="ssh-server:8080" color="rgb(255,141,0)")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
         p
           | Forwards traffic to all interfaces on port 8080 on ssh-server to
@@ -25,7 +25,7 @@
           annotated-icon(type="user" annotation="1.2.3.4")
           right-arrow
           annotated-icon(type="server" annotation="ssh-server:8080" color="rgb(255,141,0)")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="laptop" annotation="localhost:80" color="#00dcff")
         p
           | Forwards traffic to ssh-server:8080 to localhost:80 on your local system
@@ -39,7 +39,7 @@
           annotated-icon(type="users")
           right-arrow
           annotated-icon(type="server" annotation="ssh-server:8080" color="rgb(255,141,0)")
-          right-arrow(ssh="true")
+          right-arrow(:ssh="true")
           annotated-icon(type="laptop" color="#00dcff")
           right-arrow
           annotated-icon(type="cloud" annotation="example.org:80")
