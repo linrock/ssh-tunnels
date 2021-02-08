@@ -9,6 +9,7 @@
     Reliable
     MoreExamples
     Resources
+    Footer
 
 </template>
 
@@ -22,6 +23,7 @@
   import Reliable from './sections/6_Reliable.vue'
   import MoreExamples from './sections/7_MoreExamples.vue'
   import Resources from './sections/8_Resources.vue'
+  import Footer from './sections/9_Footer.vue'
 
   export default {
     name: 'app',
@@ -34,12 +36,17 @@
       JumpHosts,
       Reliable,
       MoreExamples,
-      Resources
+      Resources,
+      Footer,
     }
   }
 </script>
 
 <style lang="stylus">
+  html
+    width 100%
+    height 100%
+
   body
     color #fafafa
     background #333
@@ -48,6 +55,8 @@
     -moz-osx-font-smoothing grayscale
     margin 0
     padding 0
+    width 100%
+    height 100%
 
   a
     color #42b983
@@ -74,11 +83,12 @@
     border-radius 2px
 
   p
+    font-size 16px
     line-height 24px
     margin 20px 0
 
   section
-    padding 30px 0
+    padding 30px 20px
     header
       margin-bottom 40px
       h2
@@ -92,8 +102,8 @@
       font-size 18px
 
   .container
-    width 680px
     margin 0 auto
+    width 680px
 
   .example
     margin 30px 0 80px
