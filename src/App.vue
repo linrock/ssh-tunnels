@@ -105,6 +105,22 @@
     margin 0 auto
     width 680px
 
+  @media (max-width: 768px)
+    .container
+      max-width: 100%
+      padding:0
+      margin:0
+    section
+      padding:20px 10px;
+    .diagram-right-arrow
+      margin: 0 5px
+    .annotated-icon span
+      font-size: 0.7rem
+    code
+      white-space: nowrap
+      overflow: auto
+      font-size: 0.9rem
+
   .example
     margin 30px 0 80px
 
