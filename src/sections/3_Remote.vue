@@ -44,7 +44,7 @@
           right-arrow
           annotated-icon(type="cloud" annotation="example.org:80")
         p
-          | Fowards traffic to all interfaces on ssh-server:8080 to localhost:80
+          | Forwards traffic to all interfaces on ssh-server:8080 to localhost:80
           | on your local system. From your local system, traffic is then forwarded
           | to example.org:80. From the perspective of example.org the traffic
           | is originating from your local system.
