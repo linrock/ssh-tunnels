@@ -1,11 +1,11 @@
 <template lang="pug">
-  .diagram-right-arrow
-    template(v-if="ssh || secure")
-      .label(v-if="ssh")
-        lock.lock
-      right-arrow.right-arrow-short
-    template(v-else)
-      right-arrow
+.diagram-right-arrow
+  template(v-if="ssh || secure")
+    .label(v-if="ssh")
+      lock.lock
+    right-arrow.right-arrow-short
+  template(v-else)
+    right-arrow
 
 </template>
 

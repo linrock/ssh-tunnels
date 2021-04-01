@@ -1,15 +1,15 @@
 <template lang="pug">
-  #app
-    Introduction
-    PortForwarding
-    Local
-    Remote
-    Dynamic
-    JumpHosts
-    Reliable
-    MoreExamples
-    Resources
-    Footer
+#app
+  Introduction
+  PortForwarding
+  Local
+  Remote
+  Dynamic
+  JumpHosts
+  Reliable
+  MoreExamples
+  Resources
+  Footer
 
 </template>
 

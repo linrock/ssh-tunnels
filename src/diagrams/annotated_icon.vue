@@ -1,7 +1,7 @@
 <template lang="pug">
-  .annotated-icon(:style="[{ color }]")
-    component(:is="type")
-    span(v-if="annotation && annotation.length > 0") {{ annotation }}
+.annotated-icon(:style="[{ color }]")
+  component(:is="type")
+  span(v-if="annotation && annotation.length > 0") {{ annotation }}
 
 </template>
 

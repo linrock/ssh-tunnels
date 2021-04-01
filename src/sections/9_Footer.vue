@@ -1,8 +1,8 @@
 <template lang="pug">
-  footer
-    .container
-      a(href="https://robotmoon.com") Home
-      a(href="https://github.com/linrock/ssh-tunnels") Source code
+footer
+  .container
+    a(href="https://robotmoon.com") Home
+    a(href="https://github.com/linrock/ssh-tunnels") Source code
 
 </template>
 
