@@ -3,9 +3,14 @@ const { JSDOM } = require('jsdom');
 const puppeteer = require('puppeteer');
 const beautify = require('js-beautify').html;
 
-const OUT_DIR = './dist';                             // output dir, relative to this file
-const HTML_OUTFILE = './dist/index.html';             // output html file
-const DELETE_NODES = 'script, link[rel=preload]';     // these html tags are removed
+const OUT_DIR = './dist';                          // output dir, relative to this file
+const HTML_OUTFILE = './dist/index.html';          // output html file, pretty-printed + cleaned
+const DELETE_NODES = 'script, link[rel=preload]';  // these html tags are removed
+
+if (!fs.existsSync(OUT_DIR)) {
+  fs.mkdirSync(OUT_DIR);
+}
+fs.copyFileSync(`./public/favicon.ico`, `${OUT_DIR}/favicon.ico`);
 
 (async () => {
   const browser = await puppeteer.launch();
@@ -30,9 +35,6 @@ const DELETE_NODES = 'script, link[rel=preload]';     // these html tags are rem
   finalHtml = beautify(finalHtml, { indent_size: 2 });
 
   // write the final html to a file
-  if (!fs.existsSync(OUT_DIR)) {
-    fs.mkdirSync(OUT_DIR);
-  }
   fs.open(HTML_OUTFILE, 'w', (err) => {
     if (err) {
       throw `Couldn't open file: ${HTML_OUTFILE}`;
