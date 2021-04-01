@@ -16,16 +16,16 @@
           | you can configure the server to send heartbeat messages.
         annotated-icon(type="server" annotation="/etc/ssh/sshd_config" color="rgb(255,141,0)")
         code
-          | ServerAliveInterval 15
+          | ClientAliveInterval 15
           br
-          | ServerAliveCountMax 4
+          | ClientAliveCountMax 4
         p
           | You can also configure the client to send heartbeat messages.
         annotated-icon(type="laptop" annotation="/etc/ssh/ssh_config" color="#00dcff")
         code
-          | ClientAliveInterval 15
+          | ServerAliveInterval 15
           br
-          | ClientAliveCountMax 4
+          | ServerAliveCountMax 4
 
       .example
         h4 Using AutoSSH
