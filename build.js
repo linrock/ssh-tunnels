@@ -3,8 +3,9 @@ const { JSDOM } = require('jsdom');
 const puppeteer = require('puppeteer');
 const beautify = require('js-beautify').html;
 
-const OUT_DIR = './dist';
-const HTML_OUTFILE = './dist/index.html';
+const OUT_DIR = './dist';                             // output dir, relative to this file
+const HTML_OUTFILE = './dist/index.html';             // output html file
+const DELETE_NODES = 'script, link[rel=preload]';     // these html tags are removed
 
 (async () => {
   const browser = await puppeteer.launch();
@@ -19,10 +20,10 @@ const HTML_OUTFILE = './dist/index.html';
   }
   // get the html after rendering all JS templates
   let finalHtml = `<html>${await page.evaluate(() => document.documentElement.innerHTML)}</html>`;
-  // remove all script tags since we don't use any client JS
+  // remove some html tags that we don't need
   const dom = new JSDOM(finalHtml);
   dom.window.document.
-    querySelectorAll('script').
+    querySelectorAll(DELETE_NODES).
     forEach((scriptEl) => scriptEl.parentNode.removeChild(scriptEl));
 
   finalHtml = dom.serialize();
@@ -40,8 +41,9 @@ const HTML_OUTFILE = './dist/index.html';
       if (err) {
         console.error(err);
       } else {
-        console.log('Saved static html to dist/index.html');
+        console.log(`Saved static html to dist/index.html (size: ${finalHtml.length})`);
       }
+      // exit now that we're done
       await browser.close();
     });
   });
