@@ -20,6 +20,7 @@
     "css-loader": "^5.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "js-beautify": "^1.13.5",
     "jsdom": "^16.5.2",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",

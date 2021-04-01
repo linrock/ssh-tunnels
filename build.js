@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { JSDOM } = require('jsdom');
 const puppeteer = require('puppeteer');
+const beautify = require('js-beautify').html;
 
 const OUT_DIR = './dist';
 const HTML_OUTFILE = './dist/index.html';
@@ -25,6 +26,8 @@ const HTML_OUTFILE = './dist/index.html';
     forEach((scriptEl) => scriptEl.parentNode.removeChild(scriptEl));
 
   finalHtml = dom.serialize();
+  finalHtml = beautify(finalHtml, { indent_size: 2 });
+
   // write the final html to a file
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR);
