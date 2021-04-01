@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { JSDOM } = require('jsdom');
 const puppeteer = require('puppeteer');
 
 const OUT_DIR = './dist';
@@ -16,9 +17,15 @@ const HTML_OUTFILE = './dist/index.html';
     return;
   }
   // get the html after rendering all JS templates
-  // https://github.com/puppeteer/puppeteer/issues/331#issuecomment-323010213
-  const finalHtml = await page.evaluate(() => document.body.innerHTML);
-  // console.log(bodyHTML);
+  let finalHtml = `<html>${await page.evaluate(() => document.documentElement.innerHTML)}</html>`;
+  // remove all script tags since we don't use any client JS
+  const dom = new JSDOM(finalHtml);
+  dom.window.document.
+    querySelectorAll('script').
+    forEach((scriptEl) => scriptEl.parentNode.removeChild(scriptEl));
+
+  finalHtml = dom.serialize();
+  // write the final html to a file
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR);
   }
