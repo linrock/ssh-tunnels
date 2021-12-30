@@ -78,5 +78,6 @@ section#introduction
 
   nav
     margin 30px 0
+    line-height 1.6rem
 
 </style>
