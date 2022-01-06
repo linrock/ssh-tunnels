@@ -74,10 +74,12 @@ section#introduction
     background #222
 
   .container
-    padding 10px 0 30px
+    padding 0.7rem 0 2rem
 
   nav
-    margin 30px 0
-    line-height 1.6rem
+    margin 1.5rem 0 2rem
+
+    li
+      line-height 2rem
 
 </style>

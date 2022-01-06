@@ -14,8 +14,9 @@ section#resources
     background #222
 
   nav
-    margin-bottom 30px
+    margin-bottom 2rem
     a
       display block
+      line-height 2rem
 
 </style>

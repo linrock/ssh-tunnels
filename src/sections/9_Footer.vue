@@ -10,8 +10,8 @@ footer
   footer
     background #111
     display flex
-    padding 12px 0
+    padding 1rem 1.25rem
     a
-      margin-right 30px
+      margin-right 2rem
 
 </style>
