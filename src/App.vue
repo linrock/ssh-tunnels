@@ -66,7 +66,7 @@
       text-decoration underline
 
   h1
-    font-size 30px
+    font-size 2rem
     margin 0
 
   svg
@@ -76,39 +76,43 @@
     background #111
     color white
     display block
-    font-size 15px
-    line-height 24px
-    padding 10px 18px
-    margin 20px 0
+    font-size 1rem
+    line-height 1.5rem
+    padding 0.7rem 1rem
+    margin 1.25rem 0
     border-radius 2px
 
   p
-    font-size 16px
-    line-height 24px
-    margin 20px 0
+    font-size 1rem
+    line-height 1.5rem
+    margin 1.25rem 0
 
   section
-    padding 30px 20px
+    padding 1.5rem 1.25rem
     header
-      margin-bottom 40px
+      margin-bottom 2rem
       h2
-        font-size 1.7em
+        font-size 1.7rem
         margin 0
       h3
         font-style italic
         font-weight normal
         margin 0
     h4
-      font-size 18px
+      font-size 1.1rem
 
   .container
     margin 0 auto
     width 680px
 
   .example
-    margin 30px 0 80px
+    margin 2rem 0 5rem
 
   .flow-diagram
     display flex
+
+  @media screen and (max-width: 700px)
+    .container
+      width 100%
 
 </style>
