@@ -80,6 +80,6 @@ section#introduction
     margin 1.5rem 0 2rem
 
     li
-      line-height 2rem
+      line-height 1.7rem
 
 </style>

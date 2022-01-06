@@ -34,7 +34,7 @@ code
   background #111
   color white
   display block
-  font-size 1rem
+  font-size 0.9rem
   line-height 1.5rem
   padding 0.7rem 1rem
   margin 1.25rem 0
@@ -73,14 +73,20 @@ section
   .container
     width 100%
 
+@media screen and (max-width: 560px)
+  .flow-diagram
+    width 100%
+    transform scale(0.9) translate(-20px)
+
 @media screen and (max-width: 500px)
   .flow-diagram
-    transform: scale(0.8) translate(-50px)
-    width: 100%
+    transform scale(0.8) translate(-50px)
 
 @media screen and (max-width: 400px)
+  h1
+    font-size 1.5rem
+
   // hack to make flow diagrams fit in one line
   // TODO make these mobile friendly
   .flow-diagram
-    transform: scale(0.6) translate(-90px)
-    width: 100%
+    transform scale(0.6) translate(-90px)
