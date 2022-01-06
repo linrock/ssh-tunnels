@@ -24,6 +24,9 @@ h1
   font-size 2rem
   margin 0
 
+h1, h2
+  color #fff1ab
+
 svg
   height 30px
 
@@ -69,3 +72,15 @@ section
 @media screen and (max-width: 700px)
   .container
     width 100%
+
+@media screen and (max-width: 500px)
+  .flow-diagram
+    transform: scale(0.8) translate(-50px)
+    width: 100%
+
+@media screen and (max-width: 400px)
+  // hack to make flow diagrams fit in one line
+  // TODO make these mobile friendly
+  .flow-diagram
+    transform: scale(0.6) translate(-90px)
+    width: 100%
